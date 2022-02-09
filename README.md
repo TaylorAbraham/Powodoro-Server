@@ -1,10 +1,25 @@
-# Tay's Templates
+# Tay's Templates: Express
 
-A collection of boilerplate that I use for all my projects
+## Setup
 
-## How to Use
+### Mandatory Dependencies
 
-1. Click the "Use this template" button on this repository
-!["Use this template" button](https://docs.github.com/assets/cb-36544/images/help/repository/use-this-template-button.png)
-2. Clone your new reposity locally
-3. Move the folder you want to use up a level, and delete all other folders
+```
+npm i -S express cors morgan
+npm i -D typescript tsc-watch eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin prettier eslint-config-prettier eslint-plugin-prettier @types/express @types/morgan @types/cors
+```
+
+### Optional Dependencies
+
+```
+npm i -S dotenv node-fetch@2.0 firebase
+npm i -D @types/node-fetch@^2.0
+```
+
+## Sources
+
+`tsconfig.json` based on https://github.com/metachris/typescript-boilerplate/blob/master/tsconfig.json
+
+## Hosting
+
+[Heroku](https://www.heroku.com/) is a great option for free hosting. To avoid the startup delay of pinging the server for the first time, you can have your client ping a `/ping` or dummy route on the server when the client starts up.
